@@ -22,6 +22,10 @@ private void Start(){
             dialogue.FetchedString = Said_Text;
 
         }
+
+        if (GetComponent<Clue_Objects>() != null){
+          GetComponent<Clue_Objects>().Activate();
+        }
     }
 
     private void OnMouseOver(){

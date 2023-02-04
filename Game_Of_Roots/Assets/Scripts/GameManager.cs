@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public bool[] isActivated;
+    public bool[] eventsDone;
+    public SceneContoller sceneControl;
     private static GameManager _instance;
     public static GameManager Instance{
 
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
             return _instance;
         }
     }
+    
 
     private void Awake(){
              DontDestroyOnLoad(gameObject);
@@ -23,15 +25,13 @@ public class GameManager : MonoBehaviour
         
     } 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        for(int i = 0; i < eventsDone.Length; i++) 
+sceneControl.EventHappened[i] = eventsDone[i];
+        }
+       //sceneControl.EventHappened[0] = eventsDone[0];
     }
-}
+
