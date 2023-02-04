@@ -1,21 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Interactable_Object : MonoBehaviour
 {
-    public string Text = "";
-    public Ray ray;
-    public Vector3 mousePosition;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string Said_Text = "";
+public Dialogue dialogue;
+private void Start(){
 
-    // Update is called once per frame
-    void Update()
+  dialogue = FindObjectOfType(typeof(Dialogue)) as Dialogue;
+
+}
+    // Start is called before the first frame update
+      private void OnMouseDown()
     {
        
+        if (dialogue != null){
+ Debug.Log("CLICKED");
+            dialogue.FetchedString = Said_Text;
+
+        }
     }
+    
 }
