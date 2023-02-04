@@ -18,8 +18,8 @@ public class Mai_Walking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         Vector3 mousePos = Input.mousePosition;
-         if(Input.GetMouseButtonDown(0)){
+         //Vector3 mousePos = Input.mousePosition;
+         if(Input.GetMouseButtonDown(0)){ //checking if the mouse is down
             Debug.Log("calculating");
     characterPos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 500.0f)); //this function adapts mouse position from the screen to in-game screen
     Debug.Log("Clicked"+mousePos); 
@@ -27,10 +27,5 @@ public class Mai_Walking : MonoBehaviour
          
     }
 
-//the point function
-private void OnMouseDown() {
-    
-    
-}
 
 }
