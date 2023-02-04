@@ -6,14 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
+
+    public Dialogue dialogue;
+    public string NextSceneName;
+private void Start(){
+
+  dialogue = FindObjectOfType(typeof(Dialogue)) as Dialogue;
+
+}
       private void OnMouseDown()
     {
        
-        if (dialogue != null){
- 
-            dialogue.FetchedString = Said_Text;
-
-        }
+        SceneManager.LoadScene(NextSceneName);
     }
 
     private void OnMouseOver(){
