@@ -9,7 +9,7 @@ public class Dialogue : MonoBehaviour
 {
     public string FetchedString; //here I am keeping and updating dialogue text
  public TMP_Text Dialogue_Text;
-
+public GameObject pointImage;
 
     // Update is called once per frame
     void Update()
@@ -17,5 +17,9 @@ public class Dialogue : MonoBehaviour
         if (Dialogue_Text != null){
             Dialogue_Text.text = FetchedString; //here the dialogue text updates
         }
+
+        
     }
+
+   
 }

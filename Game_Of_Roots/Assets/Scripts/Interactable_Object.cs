@@ -23,5 +23,16 @@ private void Start(){
 
         }
     }
+
+    private void OnMouseOver(){
+       // dialogue.
+       Debug.Log("IsPointed");
+       dialogue.pointImage.SetActive(true);
+
+    }
+
+    private void OnMouseExit(){
+        dialogue.pointImage.SetActive(false);
+    }
     
 }
