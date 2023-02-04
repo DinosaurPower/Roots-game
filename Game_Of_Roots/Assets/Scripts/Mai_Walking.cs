@@ -14,7 +14,7 @@ public class Mai_Walking : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         characterPos = transform.position; //at first we fetch where the object is right now
+         whereToGo = transform.position; //at first we fetch where the object is right now
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ whereToGo = new Vector2(characterPos.x, transform.position.y); //a crutch to kee
          gameObject.transform.position = Vector2.MoveTowards(transform.position, whereToGo, speed*Time.deltaTime); //MoveTowards (from where, where to, speed) is a function tht drags objects somewhere
          
          if (gameObject.transform.position.x == characterPos.x){
-            Debug.Log("We are here"); } else { Debug.Log("Walking");}
+             } else { } //preset for animation
 
     }
 
