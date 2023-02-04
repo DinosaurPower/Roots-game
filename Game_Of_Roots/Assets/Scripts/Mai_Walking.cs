@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class Mai_Walking : MonoBehaviour
 {
-    public Vector3 characterPos;
-    private Vector3 mousePos;
+    public Vector2 characterPos;
+    private Vector2 mousePos;
     public Camera mainCamera;
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,8 @@ public class Mai_Walking : MonoBehaviour
     {
          //Vector3 mousePos = Input.mousePosition;
          if(Input.GetMouseButtonDown(0)){ //checking if the mouse is down
-            Debug.Log("calculating");
-    characterPos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 500.0f)); //this function adapts mouse position from the screen to in-game screen
-    Debug.Log("Clicked"+mousePos); 
+    characterPos = mainCamera.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y)); //this function adapts mouse position from the screen to in-game screen
+gameObject.transform.position = Vector2.MoveTowards(transform.position, characterPos, speed*Time.deltaTime);
          }
          
     }
