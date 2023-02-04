@@ -16,8 +16,9 @@ private void Start(){
     // Start is called before the first frame update
       private void OnMouseDown()
     {
-        Debug.Log("Mouse Click Detected");
+       
         if (dialogue != null){
+ Debug.Log("CLICKED");
             dialogue.FetchedString = Said_Text;
 
         }
