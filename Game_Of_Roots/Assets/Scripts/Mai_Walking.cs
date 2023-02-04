@@ -23,7 +23,7 @@ public class Mai_Walking : MonoBehaviour
     }
 
 
-private void OnMouseDown(){
+private void OnMouseClick(){
     characterPos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 500.0f)); 
     Debug.Log("Clicked"+mousePos); 
 }
