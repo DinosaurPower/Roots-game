@@ -16,13 +16,15 @@ public class MultipleDialogues : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (turn > allPhrases.Length){
+            turn = 0;
+        }
     }
 
     public void nextPhrase(){
         interactable.Said_Text = allPhrases[turn];
         turn++;
-        if (turn > allPhrases.Length){
+        if (turn >= allPhrases.Length){
             turn = 0;
         }
     }
