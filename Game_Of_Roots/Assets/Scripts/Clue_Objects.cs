@@ -9,10 +9,10 @@ public class Clue_Objects : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = FindObjectOfType(typeof(GameManager)) as GameManager;
+        gameManager = FindObjectOfType(typeof(GameManager)) as GameManager; //find game magnager
     }
 
    public void Activate(){
-    gameManager.eventsDone[EventNumber] = true;
+    gameManager.eventsDone[EventNumber] = true; //activate certain event
    }
 }
