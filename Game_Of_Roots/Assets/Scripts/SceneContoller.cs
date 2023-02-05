@@ -22,7 +22,7 @@ if (activateables[0] == null){
        
         if (EventHappened[i] != false){
                 
-                    Debug.Log(i+"activated");
+                  //  Debug.Log(i+"activated");
                     activateables[i].gameObject.SetActive(true);
                 
             }

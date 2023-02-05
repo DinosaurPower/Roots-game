@@ -35,11 +35,11 @@ whereToGo = new Vector2(characterPos.x, transform.position.y); //a crutch to kee
              } else { } //preset for animation
         if (gameObject.transform.position.x >= characterPos.x){
            gameObject.GetComponent<Transform>().localScale = new Vector3(Sc, transform.localScale.y, 0);
-        Debug.Log("-1");
+        //Debug.Log("-1");
         } 
         if (gameObject.transform.position.x < characterPos.x){
           gameObject.GetComponent<Transform>().localScale = new Vector3(-Sc, transform.localScale.y, 0);
-          Debug.Log("1");
+          //Debug.Log("1");
         }
     }
 
