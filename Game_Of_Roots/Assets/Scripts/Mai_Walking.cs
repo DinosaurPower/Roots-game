@@ -13,6 +13,8 @@ public class Mai_Walking : MonoBehaviour
     public float speed;
     public Transform transform;
     public Character_Flip flip;
+
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +35,13 @@ whereToGo = new Vector2(characterPos.x, transform.position.y); //a crutch to kee
          gameObject.transform.position = Vector2.MoveTowards(transform.position, whereToGo, speed*Time.deltaTime); //MoveTowards (from where, where to, speed) is a function tht drags objects somewhere
          
          if (gameObject.transform.position.x == characterPos.x){
-             } else { } //preset for animation
+}
+      
+            anim.SetBool("IsWalking", false);
+    
+
+
+             } else {anim.SetBool("IsWalking", true); } //preset for animation
         if (gameObject.transform.position.x >= characterPos.x){ //if the targeted location is on away, we flip character
           flip.FlipLeft();
         //Debug.Log("-1");
