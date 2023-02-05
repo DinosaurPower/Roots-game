@@ -24,19 +24,19 @@ private void Start(){
         }
 
         if (GetComponent<Clue_Objects>() != null){
-          GetComponent<Clue_Objects>().Activate();
+          GetComponent<Clue_Objects>().Activate(); //if object is activateable, activate it
         }
     }
 
     private void OnMouseOver(){
        // dialogue.
       // Debug.Log("IsPointed");
-       dialogue.pointImage.SetActive(true);
+       dialogue.pointImage.SetActive(true); //when you draw mouse on object it shows that it's activateable
 
     }
 
     private void OnMouseExit(){
-        dialogue.pointImage.SetActive(false);
+        dialogue.pointImage.SetActive(false); //when you put away mouse image disappears
     }
     
 }

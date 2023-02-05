@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
         get{
             if (_instance == null){
-                Debug.LogError("AAAAAAA");
+                Debug.LogError("AAAAAAA"); //error return
             }
             return _instance;
         }
@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     
 
     private void Awake(){
-             DontDestroyOnLoad(gameObject);
-        _instance = this;
+             DontDestroyOnLoad(gameObject); //keep the object that posesses this class when switch between scenes
+        _instance = this; //it's and instance
         
     } 
 
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-        for(int i = 0; i < eventsDone.Length; i++) 
+        for(int i = 0; i < eventsDone.Length; i++)  //transfer bools from static to non-static so they will be interactable
 sceneControl.EventHappened[i] = eventsDone[i];
         }
        //sceneControl.EventHappened[0] = eventsDone[0];

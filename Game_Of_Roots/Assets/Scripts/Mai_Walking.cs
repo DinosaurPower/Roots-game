@@ -33,11 +33,11 @@ whereToGo = new Vector2(characterPos.x, transform.position.y); //a crutch to kee
          
          if (gameObject.transform.position.x == characterPos.x){
              } else { } //preset for animation
-        if (gameObject.transform.position.x >= characterPos.x){
+        if (gameObject.transform.position.x >= characterPos.x){ //if the targeted location is on away, we flip character
            gameObject.GetComponent<Transform>().localScale = new Vector3(Sc, transform.localScale.y, 0);
         //Debug.Log("-1");
         } 
-        if (gameObject.transform.position.x < characterPos.x){
+        if (gameObject.transform.position.x < characterPos.x){ //second part of character flip
           gameObject.GetComponent<Transform>().localScale = new Vector3(-Sc, transform.localScale.y, 0);
           //Debug.Log("1");
         }
