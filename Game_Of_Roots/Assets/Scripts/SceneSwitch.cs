@@ -18,6 +18,7 @@ private void Start(){
     {
        
         SceneManager.LoadScene(NextSceneName);
+
     }
 
     private void OnMouseOver(){
