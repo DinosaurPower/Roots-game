@@ -5,29 +5,26 @@ using UnityEngine;
 public class SceneContoller : MonoBehaviour
 {
     
-    public GameObject[] toActivate;
-    public GameObject[] toDeactivate;
-   public bool[] EventHappened;
    
+   public bool[] EventHappened;
+   public Activateable[] activateables;
+
    void Start(){
-
+    var activateables = FindObjectsOfType<Activateable>();
    }
+  void Update(){
+      for(int i = 0; i < EventHappened.Length; i++){
+        if (EventHappened[i]){
+            for (int a = 0; a < activateables.Length; a++){
+                if (activateables[a].EventNumber == i){
+                    activateables[a].gameObject.SetActive(true);
+                }
+            }
 
-   void Update()
-    {
-
-
-     for(int i = 0; i < EventHappened.Length; i++) {
-if (EventHappened[i]){
-    if (toActivate[i] != null){
- toActivate[i].SetActive(true);
-    }
-   if (toDeactivate[i] != null){toDeactivate[i].SetActive(false);}
-     
-}
-     }
+        }
+      }
+  }
   
+ }
 
-    }
 
-}

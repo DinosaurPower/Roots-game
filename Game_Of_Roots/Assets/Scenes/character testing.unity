@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 144485785}
   - component: {fileID: 144485784}
   m_Layer: 0
-  m_Name: ClickableObject (1)
+  m_Name: SceneSwitch_Example
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 0}
-  NextSceneName: character testing
+  NextSceneName: TestTest
 --- !u!61 &144485785
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 345208536}
   - component: {fileID: 345208535}
   m_Layer: 0
-  m_Name: ClickableObject (2)
+  m_Name: Interactable_example
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -721,13 +721,15 @@ GameObject:
   m_Component:
   - component: {fileID: 542981025}
   - component: {fileID: 542981024}
+  - component: {fileID: 542981027}
+  - component: {fileID: 542981026}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Creatable_example
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &542981024
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -795,6 +797,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &542981026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542981023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2adba314d21fb4b37ab43faf275a85bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventNumber: 0
+--- !u!114 &542981027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542981023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9ef1eddeadd405a97c9777838b7d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Said_Text: "\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420\u0420"
+  dialogue: {fileID: 0}
 --- !u!1 &1100976159
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,7 +837,7 @@ GameObject:
   - component: {fileID: 1100976162}
   - component: {fileID: 1100976163}
   m_Layer: 0
-  m_Name: ClickableObject
+  m_Name: Dialogue_Example
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -931,9 +960,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1306244172}
   - component: {fileID: 1306244168}
-  - component: {fileID: 1306244171}
   - component: {fileID: 1306244170}
   - component: {fileID: 1306244169}
+  - component: {fileID: 1306244173}
   m_Layer: 0
   m_Name: GAME_Manager
   m_TagString: Untagged
@@ -954,7 +983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventsDone: 00000000
-  sceneControl: {fileID: 1306244171}
+  sceneControl: {fileID: 1306244173}
 --- !u!114 &1306244169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -993,21 +1022,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306244165}
   m_CullTransparentMesh: 1
---- !u!114 &1306244171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306244165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1896980e92aed4d23abd80663c167e53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toActivate: []
-  toDeactivate: []
-  EventHappened: 00000000
 --- !u!224 &1306244172
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1028,6 +1042,20 @@ RectTransform:
   m_AnchoredPosition: {x: -1.9766374, y: -0.2986415}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1306244173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306244165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1896980e92aed4d23abd80663c167e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventHappened: 00000000
+  activateables: []
 --- !u!1 &1538827075
 GameObject:
   m_ObjectHideFlags: 0
