@@ -11,9 +11,13 @@ public class Mai_Walking : MonoBehaviour
     private Vector2 whereToGo;
     public Camera mainCamera;
     public float speed;
+    public float Sc;
+    public Transform transform;
     // Start is called before the first frame update
     void Start()
     {
+        transform = gameObject.GetComponent<Transform>();
+        Sc = transform.localScale.x;
          whereToGo = transform.position; //at first we fetch where the object is right now
     }
 
@@ -29,7 +33,14 @@ whereToGo = new Vector2(characterPos.x, transform.position.y); //a crutch to kee
          
          if (gameObject.transform.position.x == characterPos.x){
              } else { } //preset for animation
-
+        if (gameObject.transform.position.x >= characterPos.x){
+           gameObject.GetComponent<Transform>().localScale = new Vector3(Sc, transform.localScale.y, 0);
+        //Debug.Log("-1");
+        } 
+        if (gameObject.transform.position.x < characterPos.x){
+          gameObject.GetComponent<Transform>().localScale = new Vector3(-Sc, transform.localScale.y, 0);
+          //Debug.Log("1");
+        }
     }
 
     //basically, the character is constantly moving toward the point, and the picked point is defined by mouse click

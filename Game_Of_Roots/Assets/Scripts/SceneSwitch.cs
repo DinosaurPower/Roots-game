@@ -1,31 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
-public class Interactable_Object : MonoBehaviour
+public class SceneSwitch : MonoBehaviour
 {
-    public string Said_Text = "";
-public Dialogue dialogue;
+
+    public Dialogue dialogue;
+    public string NextSceneName;
 private void Start(){
 
   dialogue = FindObjectOfType(typeof(Dialogue)) as Dialogue;
 
 }
-    // Start is called before the first frame update
       private void OnMouseDown()
     {
        
-        if (dialogue != null){
- //Debug.Log("CLICKED");
-            dialogue.FetchedString = Said_Text;
+        SceneManager.LoadScene(NextSceneName);
 
-        }
-
-        if (GetComponent<Clue_Objects>() != null){
-          GetComponent<Clue_Objects>().Activate();
-        }
     }
 
     private void OnMouseOver(){
@@ -38,5 +31,4 @@ private void Start(){
     private void OnMouseExit(){
         dialogue.pointImage.SetActive(false);
     }
-    
 }
