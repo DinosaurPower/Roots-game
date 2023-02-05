@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneSwitch : MonoBehaviour
 {
 
-    
+    public Dialogue dialogue;
     public string NextSceneName;
 private void Start(){
 
