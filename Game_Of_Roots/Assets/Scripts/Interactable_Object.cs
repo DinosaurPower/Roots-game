@@ -10,7 +10,7 @@ public class Interactable_Object : MonoBehaviour
 public Dialogue dialogue;
 private void Start(){
 
-  dialogue = FindObjectOfType(typeof(Dialogue)) as Dialogue;
+  dialogue = FindObjectOfType(typeof(Dialogue)) as Dialogue; //find dialogue script
 
 }
     // Start is called before the first frame update
@@ -19,10 +19,13 @@ private void Start(){
        
         if (dialogue != null){
  //Debug.Log("CLICKED");
-            dialogue.FetchedString = Said_Text;
+            dialogue.FetchedString = Said_Text; //change dialogue string into object description
 
         }
-
+        
+if (GetComponent<MultipleDialogues>()!= null){
+    GetComponent<MultipleDialogues>().nextPhrase();
+}
         if (GetComponent<Clue_Objects>() != null){
           GetComponent<Clue_Objects>().Activate(); //if object is activateable, activate it
         }
