@@ -1123,6 +1123,7 @@ MonoBehaviour:
   speed: 200
   transform: {fileID: 0}
   flip: {fileID: 2008002483}
+  anim: {fileID: 2008002484}
 --- !u!212 &1073745822
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2047,7 +2048,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: f95645708da134c61896c6e40b7c9666, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
